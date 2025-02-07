@@ -377,20 +377,20 @@
 
         /* Team Section */
         .team {
-            padding: 5rem 2rem;
-            background: var(--secondary);
-            text-align: center;
-            font-size: 1rem;
-        }
+    padding: 5rem 2rem;
+    background: var(--secondary);
+    text-align: center;
+    font-size: 1rem;
+}
 
         /* Updated Team Grid */
         .team-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 members per row */
-            gap: 2rem;
-            max-width: 800px; /* Adjusted width for better layout */
-            margin: 0 auto;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default: 2 members per row */
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
         /* Team Member Styling */
         .team-member {
@@ -432,6 +432,42 @@
             color: var(--dark);
             opacity: 0.8;
         }
+
+        /* Responsive Design */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* 1 member per row for smaller screens */
+        max-width: 100%; /* Use full width */
+    }
+
+    .team-member img {
+        width: 200px; /* Reduce image size */
+        height: 200px;
+    }
+
+    .team-member {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team {
+        padding: 3rem 1rem; /* Reduce padding on smaller devices */
+    }
+
+    .team-member img {
+        width: 150px; /* Even smaller image for very small screens */
+        height: 150px;
+    }
+
+    .team-member h3 {
+        font-size: 1.1rem;
+    }
+
+    .team-member p {
+        font-size: 0.9rem;
+    }
+}
 
 
         /* Contact Form */
