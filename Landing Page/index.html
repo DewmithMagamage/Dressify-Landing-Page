@@ -157,6 +157,26 @@
             font-weight: bold;
         }
 
+        @media (max-width: 480px) { 
+    .countdown {
+        flex-wrap: nowrap;  /* Prevent wrapping */
+        gap: 0.5rem; /* Reduce gap between items */
+        overflow-x: auto; /* Allow scrolling if needed */
+        padding: 0 1rem;
+    }
+
+    .countdown-item {
+        min-width: 60px; /* Reduce size further for small screens */
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+}
+
+
         /* Button Styling */
         .btn {
             background: #ff66b2;
@@ -377,11 +397,11 @@
 
         /* Team Section */
         .team {
-    padding: 5rem 2rem;
-    background: var(--secondary);
-    text-align: center;
-    font-size: 1rem;
-}
+            padding: 5rem 2rem;
+            background: var(--secondary);
+            text-align: center;
+            font-size: 1rem;
+        }
 
         /* Updated Team Grid */
         .team-grid {
@@ -837,6 +857,10 @@
         document.querySelector('.mobile-menu').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('active');
         });
+
+        document.getElementById("close-popup").addEventListener("click", function () {
+    document.getElementById("popup-container").style.display = "none";
+});
 
         // Countdown Timer
         function updateCountdown() {
